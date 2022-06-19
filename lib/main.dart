@@ -1,12 +1,17 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:window_size/window_size.dart';
+import 'package:window_manager/window_manager.dart';
 import 'pages/app.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    setWindowTitle("Basis批量处理工具");
-  }
+  await windowManager.ensureInitialized();
+
+  WindowOptions windowOptions =
+      WindowOptions(size: Size(1000, 400), title: 'basis批量处理工具');
+  windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.show();
+    await windowManager.focus();
+  });
   runApp(const MyApp());
 }
