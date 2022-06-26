@@ -5,6 +5,7 @@ import 'dart:io';
 class CmdHandler {
   static Future<void> runBasisCmd(
       String inputDirPath, String outputDirPath) async {
+    log('start handlde dir $inputDirPath');
     String basisExePath = p.absolute('assets\\exe\\basisu.exe');
 
     var dir = Directory(inputDirPath);
