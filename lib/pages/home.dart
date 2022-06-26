@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:basis_batch/cmd-handler/cmd-handler.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
@@ -117,5 +118,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  void onStartBtnTap() {}
+  void onStartBtnTap() {
+    CmdHandler.runBasisCmd(inputDirPath, outputDirPath);
+  }
 }
