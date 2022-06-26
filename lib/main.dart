@@ -8,7 +8,7 @@ void main() async {
   await windowManager.ensureInitialized();
 
   WindowOptions windowOptions =
-      WindowOptions(size: Size(1000, 400), title: 'basis批量处理工具');
+      WindowOptions(size: Size(600, 400), title: 'basis批量处理工具');
   windowManager.waitUntilReadyToShow(windowOptions, () async {
     await windowManager.show();
     await windowManager.focus();
