@@ -1,11 +1,14 @@
 import 'dart:developer';
-
+import 'package:basis_batch/common/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
 import 'pages/app.dart';
 
-void main(List<String> arguments) async {
-  log('$arguments');
+void main() async {
+  // var nowTime = DateTime.now();
+  // var RunEnv = String.fromEnvironment('RunEnv', defaultValue: 'local');
+  // logToTest('alsmdkaw $nowTime $RunEnv ');
+
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
 

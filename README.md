@@ -17,5 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 
 ## windows打包命令
 ```
-flutter build windows      
+flutter build windows --dart-define=RunEnv=dist
 ```
