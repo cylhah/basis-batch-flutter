@@ -5,9 +5,10 @@ import 'dart:io';
 class CmdHandler {
   static String getBasisPath() {
     if (EnvHandler.isLocal()) {
-      return p.absolute('assets\\exe\\basisu.exe');
+      return p.normalize(p.join(p.current, './assets/exe/basisu.exe'));
     } else {
-      return p.absolute('data\\flutter_assets\\assets\\exe\\basisu.exe');
+      return p.normalize(
+          p.join(p.current, './data/flutter_assets/assets/exe/basisu.exe'));
     }
   }
 
